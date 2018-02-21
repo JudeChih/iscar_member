@@ -1,0 +1,1621 @@
+@charset "UTF-8";
+body {
+  font-family: Microsoft JhengHei !important;
+  background: #151515; }
+
+@media (min-width: 992px) {
+  body.framework7-root {
+    width: 40%;
+    margin: 0 auto;
+    background: #252525;
+    box-shadow: 2px 2px 2px rgba(5, 5, 5, 0.9), 4px 4px 6px rgba(5, 5, 5, 0.7), 6px 6px 12px rgba(5, 5, 5, 0.7); } }
+.navbar {
+  background: #151515; }
+  .navbar:after {
+    background: #151515; }
+
+.page {
+  background: #1e1e1e; }
+
+.modal-text input {
+  padding: 2%;
+  font-size: 1.3em;
+  width: 90%;
+  margin: 5% 0; }
+
+.noUse {
+  visibility: hidden; }
+
+/* input placeholder颜色 */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999; }
+
+.popup {
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.95); }
+  .popup.popup-about .close-popup, .popup.popup-privacy .close-popup {
+    position: absolute;
+    font-size: 2em;
+    top: 1%;
+    right: 4%;
+    color: #333; }
+  .popup.popup-about .content-block a, .popup.popup-privacy .content-block a {
+    color: #6d6d72; }
+
+/* 3D卷軸上滑視窗 */
+.picker-modal {
+  background: #DDD; }
+  .picker-modal .toolbar {
+    background: #252525;
+    color: #eee; }
+    .picker-modal .toolbar:before {
+      height: 2px;
+      background: #333; }
+    .picker-modal .toolbar:after {
+      height: 0px; }
+    .picker-modal .toolbar a {
+      color: #fff;
+      width: 30px;
+      padding-left: 15px; }
+
+.picker-item {
+  font-size: 15.5pt; }
+  .picker-item.picker-selected {
+    color: #F26531;
+    font-size: 17.5pt; }
+
+.picker-items-col.picker-items-col-divider {
+  color: #F26531;
+  font-size: 17.5pt; }
+
+.picker-center-highlight {
+  background: -webkit-linear-gradient(-30deg, rgba(100, 100, 100, 0.3) 40%, rgba(140, 140, 140, 0.3) 48%, rgba(200, 200, 200, 0.3) 53%, rgba(140, 140, 140, 0.3) 58%, rgba(100, 100, 100, 0.3) 66%);
+  background: -moz-linear-gradient(-30deg, rgba(100, 100, 100, 0.3) 40%, rgba(140, 140, 140, 0.3) 48%, rgba(200, 200, 200, 0.3) 53%, rgba(140, 140, 140, 0.3) 58%, rgba(100, 100, 100, 0.3) 66%);
+  border-top: 1px solid rgba(140, 140, 140, 0.3);
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.7), 4px 4px 6px rgba(128, 128, 128, 0.5), 6px 6px 12px rgba(128, 128, 128, 0.5); }
+
+.toolbar .link {
+  padding: 0; }
+
+/* =========================================== */
+/*     視窗標題                                */
+/* =========================================== */
+.modal-title {
+  color: #F26531;
+  font-weight: bold;
+  /*border-bottom: 1px solid #999;*/ }
+  .modal-title + .modal-text {
+    margin-top: 2%;
+    font-size: 12pt; }
+
+.modal-inner:after {
+  background-color: #999; }
+
+.modal-button {
+  background: #ddd;
+  font-weight: bold; }
+  .modal-button.active-state {
+    background-color: #aaa; }
+
+[data-page="login"] .navbar,
+[data-page="login_b"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="login"] .navbar a.link,
+  [data-page="login_b"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="login"] .navbar:after,
+  [data-page="login_b"] .navbar:after {
+    height: 0; }
+  [data-page="login"] .navbar .backBtn,
+  [data-page="login_b"] .navbar .backBtn {
+    background-image: url(../../image/back.png);
+    background-position: center;
+    background-repeat: no-repeat; }
+[data-page="login"] .page,
+[data-page="login_b"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover; }
+  @media (min-width: 992px) {
+    [data-page="login"] .page,
+    [data-page="login_b"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+  [data-page="login"] .page .page-content,
+  [data-page="login_b"] .page .page-content {
+    padding: 0 12%; }
+    [data-page="login"] .page .page-content .logo,
+    [data-page="login_b"] .page .page-content .logo {
+      display: block;
+      margin: 0% auto;
+      margin-top: 30%;
+      margin-bottom: 16%; }
+    [data-page="login"] .page .page-content .list-block,
+    [data-page="login_b"] .page .page-content .list-block {
+      margin: 0; }
+      [data-page="login"] .page .page-content .list-block ul,
+      [data-page="login_b"] .page .page-content .list-block ul {
+        background: none; }
+        [data-page="login"] .page .page-content .list-block ul:before, [data-page="login"] .page .page-content .list-block ul:after,
+        [data-page="login_b"] .page .page-content .list-block ul:before,
+        [data-page="login_b"] .page .page-content .list-block ul:after {
+          height: 0; }
+      [data-page="login"] .page .page-content .list-block li,
+      [data-page="login_b"] .page .page-content .list-block li {
+        margin-bottom: 5%;
+        background: #d2d2d2; }
+        [data-page="login"] .page .page-content .list-block li:last-child,
+        [data-page="login_b"] .page .page-content .list-block li:last-child {
+          margin-top: -2.5%;
+          margin-bottom: 2.5%; }
+        [data-page="login"] .page .page-content .list-block li .item-content,
+        [data-page="login_b"] .page .page-content .list-block li .item-content {
+          padding-left: 0; }
+          [data-page="login"] .page .page-content .list-block li .item-content .item-media,
+          [data-page="login_b"] .page .page-content .list-block li .item-content .item-media {
+            padding-top: 10px;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center; }
+          [data-page="login"] .page .page-content .list-block li .item-content .item-inner,
+          [data-page="login_b"] .page .page-content .list-block li .item-content .item-inner {
+            margin-left: 0; }
+            [data-page="login"] .page .page-content .list-block li .item-content .item-inner:last-child:after,
+            [data-page="login_b"] .page .page-content .list-block li .item-content .item-inner:last-child:after {
+              background: none; }
+            [data-page="login"] .page .page-content .list-block li .item-content .item-inner .showpwd,
+            [data-page="login_b"] .page .page-content .list-block li .item-content .item-inner .showpwd {
+              cursor: pointer;
+              height: 44px;
+              position: absolute;
+              top: 0;
+              line-height: 44px;
+              width: 44px;
+              text-align: center;
+              color: #545454;
+              right: 0; }
+              [data-page="login"] .page .page-content .list-block li .item-content .item-inner .showpwd i,
+              [data-page="login_b"] .page .page-content .list-block li .item-content .item-inner .showpwd i {
+                font-size: 1.5em; }
+          [data-page="login"] .page .page-content .list-block li .item-content .item-title.label,
+          [data-page="login_b"] .page .page-content .list-block li .item-content .item-title.label {
+            color: #F26531;
+            font-size: 13pt;
+            width: 25%; }
+      [data-page="login"] .page .page-content .list-block input[type=time], [data-page="login"] .page .page-content .list-block input[type=number], [data-page="login"] .page .page-content .list-block input[type=search], [data-page="login"] .page .page-content .list-block input[type=text], [data-page="login"] .page .page-content .list-block input[type=password], [data-page="login"] .page .page-content .list-block input[type=email], [data-page="login"] .page .page-content .list-block input[type=tel], [data-page="login"] .page .page-content .list-block input[type=url], [data-page="login"] .page .page-content .list-block input[type=date], [data-page="login"] .page .page-content .list-block input[type=datetime-local],
+      [data-page="login_b"] .page .page-content .list-block input[type=time],
+      [data-page="login_b"] .page .page-content .list-block input[type=number],
+      [data-page="login_b"] .page .page-content .list-block input[type=search],
+      [data-page="login_b"] .page .page-content .list-block input[type=text],
+      [data-page="login_b"] .page .page-content .list-block input[type=password],
+      [data-page="login_b"] .page .page-content .list-block input[type=email],
+      [data-page="login_b"] .page .page-content .list-block input[type=tel],
+      [data-page="login_b"] .page .page-content .list-block input[type=url],
+      [data-page="login_b"] .page .page-content .list-block input[type=date],
+      [data-page="login_b"] .page .page-content .list-block input[type=datetime-local] {
+        color: #333;
+        font-size: 13pt; }
+      [data-page="login"] .page .page-content .list-block select,
+      [data-page="login"] .page .page-content .list-block textarea,
+      [data-page="login_b"] .page .page-content .list-block select,
+      [data-page="login_b"] .page .page-content .list-block textarea {
+        color: #333;
+        font-size: 13pt;
+        height: 100%; }
+    [data-page="login"] .page .page-content .login-btn,
+    [data-page="login_b"] .page .page-content .login-btn {
+      margin: 0 auto;
+      display: block;
+      border: 0;
+      border-radius: 2px;
+      background: #F26531;
+      background: -webkit-linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+      background: -moz-linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+      background: linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+      color: #FCFAF2; }
+      [data-page="login"] .page .page-content .login-btn.active-state,
+      [data-page="login_b"] .page .page-content .login-btn.active-state {
+        background: -webkit-linear-gradient(rgba(255, 130, 49, 0.75), rgba(255, 130, 49, 0.7));
+        background: -moz-linear-gradient(rgba(255, 130, 49, 0.75), rgba(255, 130, 49, 0.7)); }
+    [data-page="login"] .page .page-content .registered_foget,
+    [data-page="login_b"] .page .page-content .registered_foget {
+      margin-top: 10%;
+      font-weight: bold; }
+      [data-page="login"] .page .page-content .registered_foget a,
+      [data-page="login_b"] .page .page-content .registered_foget a {
+        color: #F26531; }
+        [data-page="login"] .page .page-content .registered_foget a.forget_password,
+        [data-page="login_b"] .page .page-content .registered_foget a.forget_password {
+          float: right; }
+    [data-page="login"] .page .page-content .other-login-note,
+    [data-page="login_b"] .page .page-content .other-login-note {
+      margin: 10% 0;
+      text-align: center;
+      color: #aaa; }
+      [data-page="login"] .page .page-content .other-login-note div,
+      [data-page="login_b"] .page .page-content .other-login-note div {
+        margin: 0;
+        display: inline-block; }
+        [data-page="login"] .page .page-content .other-login-note div img,
+        [data-page="login_b"] .page .page-content .other-login-note div img {
+          vertical-align: middle; }
+      [data-page="login"] .page .page-content .other-login-note div:first-child,
+      [data-page="login_b"] .page .page-content .other-login-note div:first-child {
+        padding-right: 5px; }
+      [data-page="login"] .page .page-content .other-login-note div:last-child,
+      [data-page="login_b"] .page .page-content .other-login-note div:last-child {
+        padding-left: 5px; }
+      [data-page="login"] .page .page-content .other-login-note div:nth-child(odd),
+      [data-page="login_b"] .page .page-content .other-login-note div:nth-child(odd) {
+        width: calc((100% - 94px)/2); }
+    [data-page="login"] .page .page-content .other-login-block .fb_login,
+    [data-page="login_b"] .page .page-content .other-login-block .fb_login {
+      background: #4c69ba;
+      background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+      background: -moz-linear-gradient(#4c69ba, #3b55a0);
+      background: linear-gradient(rgba(76, 105, 186, 0.95), rgba(76, 105, 186, 0.9));
+      color: #FFF;
+      border: 0;
+      border-radius: 2px; }
+      [data-page="login"] .page .page-content .other-login-block .fb_login.active-state,
+      [data-page="login_b"] .page .page-content .other-login-block .fb_login.active-state {
+        background: #4c69ba;
+        background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+        background: linear-gradient(#334785, #29396a);
+        color: #CCC; }
+    [data-page="login"] .page .page-content .bottom-block,
+    [data-page="login_b"] .page .page-content .bottom-block {
+      margin-top: 20%;
+      text-align: center;
+      color: #FCFAF2; }
+      [data-page="login"] .page .page-content .bottom-block a,
+      [data-page="login_b"] .page .page-content .bottom-block a {
+        color: #FCFAF2;
+        margin: 0 15px; }
+  @media (min-width: 992px) {
+    [data-page="login"] .page .page-content,
+    [data-page="login_b"] .page .page-content {
+      padding: 5% 20%; } }
+
+/*使用條款*/
+.authorization-popup {
+  overflow: hidden; }
+  .authorization-popup .content-block {
+    margin: 5% 0;
+    height: 100%; }
+    .authorization-popup .content-block .title {
+      color: #F26531;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold; }
+    .authorization-popup .content-block .authorization-content {
+      font-size: 1em;
+      line-height: 2;
+      overflow-y: auto;
+      height: 100%;
+      margin: 5% 0; }
+      .authorization-popup .content-block .authorization-content .btns {
+        margin-top: 10%;
+        height: 25%;
+        padding: 4%; }
+        .authorization-popup .content-block .authorization-content .btns .col-100 {
+          width: 100%;
+          position: initial;
+          color: firebrick;
+          text-align: center;
+          font-size: 1.3em;
+          border-radius: 5px;
+          box-shadow: 1px 1px 4px rgba(102, 102, 102, 0.9), 2px 2px 10px rgba(102, 102, 102, 0.7), 1px 4px 15px rgba(102, 102, 102, 0.7);
+          background: rgba(204, 204, 204, 0.7); }
+          .authorization-popup .content-block .authorization-content .btns .col-100.agree {
+            color: dodgerblue; }
+          .authorization-popup .content-block .authorization-content .btns .col-100.active-state {
+            margin-top: 1px;
+            box-shadow: none; }
+        .authorization-popup .content-block .authorization-content .btns .col-10 {
+          width: 10%; }
+
+/* =========================================== */
+/*     首頁                                     */
+/* =========================================== */
+[data-page="index"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="index"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="index"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="index"] .navbar:after {
+    height: 0; }
+[data-page="index"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover; }
+  @media (min-width: 992px) {
+    [data-page="index"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+  [data-page="index"] .page .page-content {
+    padding: 0 5%;
+    padding-top: 44px; }
+  @media (min-width: 992px) {
+    [data-page="index"] .page .page-content {
+      padding: 5% 20%; } }
+
+/* =========================================== */
+/*     註冊選擇                                 */
+/* =========================================== */
+[data-page="regiest"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="regiest"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="regiest"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="regiest"] .navbar:after {
+    height: 0; }
+[data-page="regiest"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover; }
+  @media (min-width: 992px) {
+    [data-page="regiest"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+  [data-page="regiest"] .page .page-content {
+    padding: 40% 15%; }
+    [data-page="regiest"] .page .page-content .logo {
+      display: block;
+      margin: 0% auto;
+      margin-bottom: 15%;
+      width: 35%; }
+    [data-page="regiest"] .page .page-content .title {
+      text-align: center;
+      margin-bottom: 35%;
+      font-size: 24px;
+      font-weight: bold;
+      color: #FCFAF2; }
+    [data-page="regiest"] .page .page-content .no-gutter .iscar_regiest_btn, [data-page="regiest"] .page .page-content .no-gutter .fb_regiest_btn {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 2px;
+      padding: 0;
+      margin-top: 5%;
+      color: #FCFAF2; }
+      [data-page="regiest"] .page .page-content .no-gutter .iscar_regiest_btn img, [data-page="regiest"] .page .page-content .no-gutter .fb_regiest_btn img {
+        height: 44px;
+        position: absolute;
+        left: 0;
+        z-index: 1; }
+      [data-page="regiest"] .page .page-content .no-gutter .iscar_regiest_btn div, [data-page="regiest"] .page .page-content .no-gutter .fb_regiest_btn div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 9; }
+    [data-page="regiest"] .page .page-content .no-gutter .iscar_regiest_btn {
+      background-color: #EE6531;
+      position: relative; }
+    [data-page="regiest"] .page .page-content .no-gutter .fb_regiest_btn {
+      background-color: #3C5A9A;
+      position: relative; }
+  @media (min-width: 550px) {
+    [data-page="regiest"] .page .page-content {
+      padding: 20% 12%; } }
+  @media (min-width: 992px) {
+    [data-page="regiest"] .page .page-content {
+      padding: 15% 10%; } }
+
+/* =========================================== */
+/*     一般註冊                                 */
+/* =========================================== */
+[data-page="regiestiscar"] .navbar,
+[data-page="regiestthirdparty"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="regiestiscar"] .navbar::before,
+  [data-page="regiestthirdparty"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="regiestiscar"] .navbar a.link,
+  [data-page="regiestthirdparty"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="regiestiscar"] .navbar:after,
+  [data-page="regiestthirdparty"] .navbar:after {
+    height: 0; }
+[data-page="regiestiscar"] .page,
+[data-page="regiestthirdparty"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover;
+  background: #1e1e1e;
+  overflow: auto; }
+  @media (min-width: 992px) {
+    [data-page="regiestiscar"] .page,
+    [data-page="regiestthirdparty"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+  [data-page="regiestiscar"] .page .page-content,
+  [data-page="regiestthirdparty"] .page .page-content {
+    padding: 0 15%;
+    padding-top: 44px; }
+    [data-page="regiestiscar"] .page .page-content .regiest_btn,
+    [data-page="regiestthirdparty"] .page .page-content .regiest_btn {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 2px;
+      padding: 0;
+      color: #FCFAF2;
+      background-color: #EE6531;
+      font-weight: bold;
+      margin-bottom: 15%; }
+    [data-page="regiestiscar"] .page .page-content .font_style,
+    [data-page="regiestthirdparty"] .page .page-content .font_style {
+      font-size: 20px;
+      color: #FCFAF2;
+      margin-top: 10%;
+      text-align: center; }
+    [data-page="regiestiscar"] .page .page-content .list-block ul,
+    [data-page="regiestthirdparty"] .page .page-content .list-block ul {
+      background: none; }
+      [data-page="regiestiscar"] .page .page-content .list-block ul:before, [data-page="regiestiscar"] .page .page-content .list-block ul:after,
+      [data-page="regiestthirdparty"] .page .page-content .list-block ul:before,
+      [data-page="regiestthirdparty"] .page .page-content .list-block ul:after {
+        height: 0; }
+    [data-page="regiestiscar"] .page .page-content .list-block li,
+    [data-page="regiestthirdparty"] .page .page-content .list-block li {
+      margin-bottom: 5%;
+      background: #545454; }
+    [data-page="regiestiscar"] .page .page-content .list-block .item-inner:after,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .item-inner:after {
+      width: 93%;
+      background-color: #545454; }
+    [data-page="regiestiscar"] .page .page-content .list-block .iscarpolicy_style .item-inner:after,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .iscarpolicy_style .item-inner:after {
+      background-color: #1e1e1e; }
+    [data-page="regiestiscar"] .page .page-content .list-block .iscarpolicy_style .item-inner,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .iscarpolicy_style .item-inner {
+      padding-right: 0;
+      color: #FCFAF2; }
+    [data-page="regiestiscar"] .page .page-content .list-block .iscarpolicy_style .item-content,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .iscarpolicy_style .item-content {
+      padding-left: 0; }
+    [data-page="regiestiscar"] .page .page-content .list-block .item-title.label,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .item-title.label {
+      color: #d3d3d3;
+      font-size: 13pt;
+      width: 25%; }
+    [data-page="regiestiscar"] .page .page-content .list-block .item-media,
+    [data-page="regiestthirdparty"] .page .page-content .list-block .item-media {
+      color: slategray;
+      font-size: 13.5pt;
+      width: 35px;
+      background: none;
+      border-radius: 5px;
+      margin-top: 1.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      [data-page="regiestiscar"] .page .page-content .list-block .item-media .fa,
+      [data-page="regiestthirdparty"] .page .page-content .list-block .item-media .fa {
+        font-size: 1.2em; }
+    [data-page="regiestiscar"] .page .page-content .list-block input[type=time], [data-page="regiestiscar"] .page .page-content .list-block input[type=number], [data-page="regiestiscar"] .page .page-content .list-block input[type=search], [data-page="regiestiscar"] .page .page-content .list-block input[type=text], [data-page="regiestiscar"] .page .page-content .list-block input[type=password], [data-page="regiestiscar"] .page .page-content .list-block input[type=email], [data-page="regiestiscar"] .page .page-content .list-block input[type=tel], [data-page="regiestiscar"] .page .page-content .list-block input[type=url], [data-page="regiestiscar"] .page .page-content .list-block input[type=date], [data-page="regiestiscar"] .page .page-content .list-block input[type=datetime-local],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=time],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=number],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=search],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=text],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=password],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=email],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=tel],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=url],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=date],
+    [data-page="regiestthirdparty"] .page .page-content .list-block input[type=datetime-local] {
+      color: #FCFAF2;
+      font-size: 13pt; }
+    [data-page="regiestiscar"] .page .page-content .list-block select,
+    [data-page="regiestiscar"] .page .page-content .list-block textarea,
+    [data-page="regiestthirdparty"] .page .page-content .list-block select,
+    [data-page="regiestthirdparty"] .page .page-content .list-block textarea {
+      color: #FCFAF2;
+      font-size: 13pt;
+      height: 100%; }
+  @media (min-width: 992px) {
+    [data-page="regiestiscar"] .page .page-content,
+    [data-page="regiestthirdparty"] .page .page-content {
+      padding: 5% 20%; } }
+  [data-page="regiestiscar"] .page .toolbar:before,
+  [data-page="regiestthirdparty"] .page .toolbar:before {
+    height: 0; }
+  [data-page="regiestiscar"] .page .toolbar.toolbar-bottom,
+  [data-page="regiestthirdparty"] .page .toolbar.toolbar-bottom {
+    background: #F26531;
+    position: fixed; }
+    [data-page="regiestiscar"] .page .toolbar.toolbar-bottom .toolbar-inner,
+    [data-page="regiestthirdparty"] .page .toolbar.toolbar-bottom .toolbar-inner {
+      padding: 0; }
+      [data-page="regiestiscar"] .page .toolbar.toolbar-bottom .toolbar-inner a,
+      [data-page="regiestthirdparty"] .page .toolbar.toolbar-bottom .toolbar-inner a {
+        width: 100%;
+        height: 100%;
+        color: #FCFAF2;
+        font-size: 1.3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        [data-page="regiestiscar"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state,
+        [data-page="regiestthirdparty"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state {
+          background: #a26531; }
+        [data-page="regiestiscar"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover,
+        [data-page="regiestthirdparty"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover {
+          background: rgba(255, 130, 80, 0.9); }
+[data-page="regiestiscar"] .account-block:after,
+[data-page="regiestiscar"] .password-block:after,
+[data-page="regiestiscar"] .passwordconfirm-block:after,
+[data-page="regiestiscar"] .nickname-block:after,
+[data-page="regiestiscar"] .countrycode-block:after,
+[data-page="regiestiscar"] .cellphone-block:after,
+[data-page="regiestthirdparty"] .account-block:after,
+[data-page="regiestthirdparty"] .password-block:after,
+[data-page="regiestthirdparty"] .passwordconfirm-block:after,
+[data-page="regiestthirdparty"] .nickname-block:after,
+[data-page="regiestthirdparty"] .countrycode-block:after,
+[data-page="regiestthirdparty"] .cellphone-block:after {
+  display: block;
+  margin-top: 1%;
+  margin-left: 15%;
+  color: red; }
+[data-page="regiestiscar"] .cellphone-block.lengthError:after,
+[data-page="regiestthirdparty"] .cellphone-block.lengthError:after {
+  content: '* 長度錯誤'; }
+[data-page="regiestiscar"] .account-block.lengthError:after,
+[data-page="regiestthirdparty"] .account-block.lengthError:after {
+  content: '* 長度勿超過64個字'; }
+[data-page="regiestiscar"] .nickname-block.lengthError:after,
+[data-page="regiestthirdparty"] .nickname-block.lengthError:after {
+  content: '* 長度勿超過15個字'; }
+[data-page="regiestiscar"] .account-block.spacesError:after,
+[data-page="regiestiscar"] .password-block.spacesError:after,
+[data-page="regiestiscar"] .passwordconfirm-block.spacesError:after,
+[data-page="regiestiscar"] .nickname-block.spacesError:after,
+[data-page="regiestiscar"] .countrycode-block.spacesError:after,
+[data-page="regiestiscar"] .cellphone-block.spacesError:after,
+[data-page="regiestthirdparty"] .account-block.spacesError:after,
+[data-page="regiestthirdparty"] .password-block.spacesError:after,
+[data-page="regiestthirdparty"] .passwordconfirm-block.spacesError:after,
+[data-page="regiestthirdparty"] .nickname-block.spacesError:after,
+[data-page="regiestthirdparty"] .countrycode-block.spacesError:after,
+[data-page="regiestthirdparty"] .cellphone-block.spacesError:after {
+  content: '* 勿包含空白字元'; }
+[data-page="regiestiscar"] .account-block.formatError:after,
+[data-page="regiestthirdparty"] .account-block.formatError:after {
+  content: '* 格式錯誤'; }
+[data-page="regiestiscar"] .iscarpolicy_style.nullError:after,
+[data-page="regiestthirdparty"] .iscarpolicy_style.nullError:after {
+  display: block;
+  margin-top: 1%;
+  margin-left: 15px;
+  color: red;
+  content: '* 請打勾'; }
+[data-page="regiestiscar"] .account-block.nullError:after,
+[data-page="regiestiscar"] .password-block.nullError:after,
+[data-page="regiestiscar"] .passwordconfirm-block.nullError:after,
+[data-page="regiestiscar"] .nickname-block.nullError:after,
+[data-page="regiestiscar"] .countrycode-block.nullError:after,
+[data-page="regiestiscar"] .cellphone-block.nullError:after,
+[data-page="regiestthirdparty"] .account-block.nullError:after,
+[data-page="regiestthirdparty"] .password-block.nullError:after,
+[data-page="regiestthirdparty"] .passwordconfirm-block.nullError:after,
+[data-page="regiestthirdparty"] .nickname-block.nullError:after,
+[data-page="regiestthirdparty"] .countrycode-block.nullError:after,
+[data-page="regiestthirdparty"] .cellphone-block.nullError:after {
+  content: '* 必填'; }
+
+/* =========================================== */
+/*     社群會員註冊                              */
+/* =========================================== */
+[data-page="social-regiest"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="social-regiest"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="social-regiest"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="social-regiest"] .navbar:after {
+    height: 0; }
+[data-page="social-regiest"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover; }
+  @media (min-width: 992px) {
+    [data-page="social-regiest"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+  [data-page="social-regiest"] .page .page-content {
+    padding: 0 5%;
+    padding-top: 44px; }
+    [data-page="social-regiest"] .page .page-content .list-block ul {
+      background: none; }
+      [data-page="social-regiest"] .page .page-content .list-block ul:before, [data-page="social-regiest"] .page .page-content .list-block ul:after {
+        height: 0; }
+    [data-page="social-regiest"] .page .page-content .list-block li {
+      padding-bottom: 4%; }
+    [data-page="social-regiest"] .page .page-content .list-block .item-inner:after {
+      width: 93%;
+      background-color: #444; }
+    [data-page="social-regiest"] .page .page-content .list-block .item-title.label {
+      color: #F26531;
+      font-size: 13pt;
+      width: 25%; }
+    [data-page="social-regiest"] .page .page-content .list-block .item-media {
+      color: slategray;
+      font-size: 13.5pt;
+      width: 35px;
+      background: none;
+      border-radius: 5px;
+      margin-top: 1.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      [data-page="social-regiest"] .page .page-content .list-block .item-media .fa {
+        font-size: 1.2em; }
+    [data-page="social-regiest"] .page .page-content .list-block input[type=time], [data-page="social-regiest"] .page .page-content .list-block input[type=number], [data-page="social-regiest"] .page .page-content .list-block input[type=search], [data-page="social-regiest"] .page .page-content .list-block input[type=text], [data-page="social-regiest"] .page .page-content .list-block input[type=password], [data-page="social-regiest"] .page .page-content .list-block input[type=email], [data-page="social-regiest"] .page .page-content .list-block input[type=tel], [data-page="social-regiest"] .page .page-content .list-block input[type=url], [data-page="social-regiest"] .page .page-content .list-block input[type=date], [data-page="social-regiest"] .page .page-content .list-block input[type=datetime-local] {
+      color: #FCFAF2;
+      font-size: 13pt; }
+    [data-page="social-regiest"] .page .page-content .list-block select,
+    [data-page="social-regiest"] .page .page-content .list-block textarea {
+      color: #FCFAF2;
+      font-size: 13pt;
+      height: 100%; }
+  @media (min-width: 992px) {
+    [data-page="social-regiest"] .page .page-content {
+      padding: 5% 20%; } }
+  [data-page="social-regiest"] .page .toolbar:before {
+    height: 0; }
+  [data-page="social-regiest"] .page .toolbar.toolbar-bottom {
+    background: #F26531;
+    position: fixed; }
+    [data-page="social-regiest"] .page .toolbar.toolbar-bottom .toolbar-inner {
+      padding: 0; }
+      [data-page="social-regiest"] .page .toolbar.toolbar-bottom .toolbar-inner a {
+        width: 100%;
+        height: 100%;
+        color: #FCFAF2;
+        font-size: 1.3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        [data-page="social-regiest"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state {
+          background: #a26531; }
+        [data-page="social-regiest"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover {
+          background: rgba(255, 130, 80, 0.9); }
+[data-page="social-regiest"] .nickname-block:after,
+[data-page="social-regiest"] .countrycode-block:after,
+[data-page="social-regiest"] .cellphone-block:after {
+  display: block;
+  margin-top: 1%;
+  margin-left: 15%;
+  color: red; }
+[data-page="social-regiest"] .cellphone-block.lengthError:after {
+  content: '* 長度錯誤'; }
+[data-page="social-regiest"] .nickname-block.lengthError:after {
+  content: '* 長度勿超過15個字'; }
+[data-page="social-regiest"] .nickname-block.spacesError:after,
+[data-page="social-regiest"] .countrycode-block.spacesError:after,
+[data-page="social-regiest"] .cellphone-block.spacesError:after {
+  content: '* 勿包含空白字元'; }
+[data-page="social-regiest"] .nickname-block.nullError:after,
+[data-page="social-regiest"] .countrycode-block.nullError:after,
+[data-page="social-regiest"] .cellphone-block.nullError:after {
+  content: '* 必填'; }
+
+/*一般會員註冊&手機設定*/
+.member-registered-popup,
+.mobile-set-popup,
+.forget-password-popup {
+  overflow: hidden; }
+  .member-registered-popup .close-popup,
+  .mobile-set-popup .close-popup,
+  .forget-password-popup .close-popup {
+    position: absolute;
+    font-size: 2em;
+    top: 1%;
+    right: 4%;
+    color: #333; }
+  .member-registered-popup .content-block,
+  .mobile-set-popup .content-block,
+  .forget-password-popup .content-block {
+    margin: 5% 0%;
+    height: 100%; }
+    .member-registered-popup .content-block .title,
+    .mobile-set-popup .content-block .title,
+    .forget-password-popup .content-block .title {
+      color: #F26531;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold; }
+    .member-registered-popup .content-block .list-block ul,
+    .mobile-set-popup .content-block .list-block ul,
+    .forget-password-popup .content-block .list-block ul {
+      background: none; }
+      .member-registered-popup .content-block .list-block ul:before, .member-registered-popup .content-block .list-block ul:after,
+      .mobile-set-popup .content-block .list-block ul:before,
+      .mobile-set-popup .content-block .list-block ul:after,
+      .forget-password-popup .content-block .list-block ul:before,
+      .forget-password-popup .content-block .list-block ul:after {
+        height: 0; }
+    .member-registered-popup .content-block .list-block li,
+    .mobile-set-popup .content-block .list-block li,
+    .forget-password-popup .content-block .list-block li {
+      padding-bottom: 4%; }
+    .member-registered-popup .content-block .list-block .item-inner:after,
+    .mobile-set-popup .content-block .list-block .item-inner:after,
+    .forget-password-popup .content-block .list-block .item-inner:after {
+      width: 93%;
+      background-color: rgba(0, 0, 0, 0); }
+    .member-registered-popup .content-block .list-block .region-block,
+    .mobile-set-popup .content-block .list-block .region-block,
+    .forget-password-popup .content-block .list-block .region-block {
+      padding-bottom: 1%; }
+      .member-registered-popup .content-block .list-block .region-block .item-inner:after,
+      .mobile-set-popup .content-block .list-block .region-block .item-inner:after,
+      .forget-password-popup .content-block .list-block .region-block .item-inner:after {
+        background-color: rgba(0, 0, 0, 0); }
+    .member-registered-popup .content-block .list-block .chip-block,
+    .mobile-set-popup .content-block .list-block .chip-block,
+    .forget-password-popup .content-block .list-block .chip-block {
+      margin: 0 55px; }
+      .member-registered-popup .content-block .list-block .chip-block .chip,
+      .mobile-set-popup .content-block .list-block .chip-block .chip,
+      .forget-password-popup .content-block .list-block .chip-block .chip {
+        margin: 0 10px;
+        background: dimgray;
+        font-size: 1em;
+        padding: 15px;
+        line-height: 30px; }
+    .member-registered-popup .content-block .list-block .item-title.label,
+    .mobile-set-popup .content-block .list-block .item-title.label,
+    .forget-password-popup .content-block .list-block .item-title.label {
+      color: #222;
+      font-size: 13pt;
+      width: 25%; }
+    .member-registered-popup .content-block .list-block .item-media,
+    .mobile-set-popup .content-block .list-block .item-media,
+    .forget-password-popup .content-block .list-block .item-media {
+      color: slategray;
+      font-size: 13.5pt;
+      width: 35px;
+      background: none;
+      border-radius: 5px;
+      margin-top: 1.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      .member-registered-popup .content-block .list-block .item-media .fa,
+      .mobile-set-popup .content-block .list-block .item-media .fa,
+      .forget-password-popup .content-block .list-block .item-media .fa {
+        font-size: 1.2em; }
+    .member-registered-popup .content-block .list-block input[type=time], .member-registered-popup .content-block .list-block input[type=number], .member-registered-popup .content-block .list-block input[type=search], .member-registered-popup .content-block .list-block input[type=text], .member-registered-popup .content-block .list-block input[type=password], .member-registered-popup .content-block .list-block input[type=email], .member-registered-popup .content-block .list-block input[type=tel], .member-registered-popup .content-block .list-block input[type=url], .member-registered-popup .content-block .list-block input[type=date], .member-registered-popup .content-block .list-block input[type=datetime-local],
+    .mobile-set-popup .content-block .list-block input[type=time],
+    .mobile-set-popup .content-block .list-block input[type=number],
+    .mobile-set-popup .content-block .list-block input[type=search],
+    .mobile-set-popup .content-block .list-block input[type=text],
+    .mobile-set-popup .content-block .list-block input[type=password],
+    .mobile-set-popup .content-block .list-block input[type=email],
+    .mobile-set-popup .content-block .list-block input[type=tel],
+    .mobile-set-popup .content-block .list-block input[type=url],
+    .mobile-set-popup .content-block .list-block input[type=date],
+    .mobile-set-popup .content-block .list-block input[type=datetime-local],
+    .forget-password-popup .content-block .list-block input[type=time],
+    .forget-password-popup .content-block .list-block input[type=number],
+    .forget-password-popup .content-block .list-block input[type=search],
+    .forget-password-popup .content-block .list-block input[type=text],
+    .forget-password-popup .content-block .list-block input[type=password],
+    .forget-password-popup .content-block .list-block input[type=email],
+    .forget-password-popup .content-block .list-block input[type=tel],
+    .forget-password-popup .content-block .list-block input[type=url],
+    .forget-password-popup .content-block .list-block input[type=date],
+    .forget-password-popup .content-block .list-block input[type=datetime-local] {
+      color: steelblue;
+      font-size: 13pt;
+      border-bottom: 1px solid #999;
+      padding-left: 10px; }
+    .member-registered-popup .content-block .list-block select,
+    .mobile-set-popup .content-block .list-block select,
+    .forget-password-popup .content-block .list-block select {
+      color: #777;
+      font-size: 13pt;
+      border-bottom: 1px solid #999;
+      width: 60px;
+      margin-right: 15px;
+      padding-left: 10px; }
+  .member-registered-popup .toolbar:before,
+  .mobile-set-popup .toolbar:before,
+  .forget-password-popup .toolbar:before {
+    height: 0; }
+  .member-registered-popup .toolbar.toolbar-bottom,
+  .mobile-set-popup .toolbar.toolbar-bottom,
+  .forget-password-popup .toolbar.toolbar-bottom {
+    background: #F26531;
+    position: fixed; }
+    .member-registered-popup .toolbar.toolbar-bottom .toolbar-inner,
+    .mobile-set-popup .toolbar.toolbar-bottom .toolbar-inner,
+    .forget-password-popup .toolbar.toolbar-bottom .toolbar-inner {
+      padding: 0; }
+      .member-registered-popup .toolbar.toolbar-bottom .toolbar-inner a,
+      .mobile-set-popup .toolbar.toolbar-bottom .toolbar-inner a,
+      .forget-password-popup .toolbar.toolbar-bottom .toolbar-inner a {
+        width: 100%;
+        height: 100%;
+        color: #FCFAF2;
+        font-size: 1.3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .member-registered-popup .toolbar.toolbar-bottom .toolbar-inner a.active-state,
+        .mobile-set-popup .toolbar.toolbar-bottom .toolbar-inner a.active-state,
+        .forget-password-popup .toolbar.toolbar-bottom .toolbar-inner a.active-state {
+          background: #a26531; }
+        .member-registered-popup .toolbar.toolbar-bottom .toolbar-inner a:hover,
+        .mobile-set-popup .toolbar.toolbar-bottom .toolbar-inner a:hover,
+        .forget-password-popup .toolbar.toolbar-bottom .toolbar-inner a:hover {
+          background: rgba(255, 130, 80, 0.9); }
+
+/*手機認證*/
+.mobile-check-popup {
+  overflow: hidden; }
+  .mobile-check-popup .close-popup {
+    position: absolute;
+    font-size: 2em;
+    top: 1%;
+    right: 4%;
+    color: #333; }
+  .mobile-check-popup .content-block {
+    margin: 5% 10%;
+    height: 100%; }
+    .mobile-check-popup .content-block .title {
+      color: #F26531;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold; }
+    .mobile-check-popup .content-block .verification_code {
+      border: 0px;
+      border-bottom: 1px solid #aaa;
+      width: 100%;
+      font-size: 3em;
+      background: none;
+      margin: 20% auto;
+      text-align: center;
+      display: block;
+      margin-top: 50%; }
+    .mobile-check-popup .content-block a {
+      color: #FCFAF2; }
+      .mobile-check-popup .content-block a.button {
+        border: 0px; }
+        .mobile-check-popup .content-block a.button.re-send {
+          background: rgba(50, 180, 150, 0.8); }
+          .mobile-check-popup .content-block a.button.re-send.active-state {
+            background: rgba(50, 220, 170, 0.8); }
+        .mobile-check-popup .content-block a.button.confirm {
+          background: rgba(50, 100, 200, 0.8); }
+          .mobile-check-popup .content-block a.button.confirm.active-state {
+            background: rgba(50, 120, 255, 0.8); }
+
+/* =========================================== */
+/*     忘記密碼                                 */
+/* =========================================== */
+[data-page="forgetpwd"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="forgetpwd"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="forgetpwd"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="forgetpwd"] .navbar:after {
+    height: 0; }
+[data-page="forgetpwd"] .page {
+  background: #1e1e1e; }
+  [data-page="forgetpwd"] .page .page-content {
+    padding: 0 15%;
+    padding-top: 44px; }
+    [data-page="forgetpwd"] .page .page-content .font_style {
+      font-size: 20px;
+      color: #FCFAF2;
+      margin-bottom: 15%;
+      margin-top: 32%;
+      text-align: center; }
+    [data-page="forgetpwd"] .page .page-content .forget_pwd_btn {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 2px;
+      padding: 0;
+      color: #FCFAF2;
+      background-color: #EE6531;
+      font-weight: bold; }
+    [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block {
+      padding: 0; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item_input input {
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        width: 100%;
+        font-size: 16px;
+        background: none;
+        text-align: center;
+        display: block;
+        color: #F26531;
+        height: 52px; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item-inner {
+        margin: 5% auto calc(60% - 17px) auto; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item-inner:after {
+        width: 93%;
+        background-color: rgba(0, 0, 0, 0); }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .region-block {
+        padding-bottom: 1%; }
+        [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .region-block .item-inner:after {
+          background-color: rgba(0, 0, 0, 0); }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .chip-block {
+        margin: 0 55px; }
+        [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .chip-block .chip {
+          margin: 0 10px;
+          background: dimgray;
+          font-size: 1em;
+          padding: 15px;
+          line-height: 30px; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item-title.label {
+        color: #222;
+        font-size: 13pt;
+        width: 25%; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item-media {
+        color: slategray;
+        font-size: 13.5pt;
+        width: 35px;
+        background: none;
+        border-radius: 5px;
+        margin-top: 1.5%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block .item-media .fa {
+          font-size: 1.2em; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content .content-block select {
+        color: #777;
+        font-size: 13pt;
+        border-bottom: 1px solid #999;
+        width: 60px;
+        margin-right: 15px;
+        padding-left: 10px; }
+  @media (min-width: 992px) {
+    [data-page="forgetpwd"] .page .page-content {
+      padding: 5% 20%; }
+      [data-page="forgetpwd"] .page .page-content.forgetpwd-content {
+        margin-top: 20%; } }
+  [data-page="forgetpwd"] .page .toolbar:before {
+    height: 0; }
+  [data-page="forgetpwd"] .page .toolbar.toolbar-bottom {
+    background: #F26531;
+    position: fixed; }
+    [data-page="forgetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner {
+      padding: 0; }
+      [data-page="forgetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a {
+        width: 100%;
+        height: 100%;
+        color: #FCFAF2;
+        font-size: 1.3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        [data-page="forgetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state {
+          background: #a26531; }
+        [data-page="forgetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover {
+          background: rgba(255, 130, 80, 0.9); }
+[data-page="forgetpwd"] .account-block:after {
+  display: block;
+  margin-top: 1%;
+  margin-left: 15%;
+  color: red; }
+[data-page="forgetpwd"] .account-block.lengthError:after {
+  content: '* 長度勿超過64個字'; }
+[data-page="forgetpwd"] .account-block.spacesError:after {
+  content: '* 勿包含空白字元'; }
+[data-page="forgetpwd"] .account-block.formatError:after {
+  content: '* 格式錯誤'; }
+[data-page="forgetpwd"] .account-block.nullError:after {
+  content: '* 必填'; }
+
+/* =========================================== */
+/*     手機驗證                                 */
+/* =========================================== */
+[data-page="regiestverify"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="regiestverify"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="regiestverify"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="regiestverify"] .navbar:after {
+    height: 0; }
+[data-page="regiestverify"] .page {
+  background: #1e1e1e; }
+  [data-page="regiestverify"] .page .page-content {
+    padding: 0 15%;
+    padding-top: 44px; }
+    [data-page="regiestverify"] .page .page-content .font_style {
+      font-size: 20px;
+      color: #FCFAF2;
+      margin-top: 40%;
+      text-align: center; }
+    [data-page="regiestverify"] .page .page-content .mobile-check .content-block {
+      padding: 0; }
+      [data-page="regiestverify"] .page .page-content .mobile-check .content-block .title {
+        color: #F26531;
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: bold; }
+      [data-page="regiestverify"] .page .page-content .mobile-check .content-block .verifycode-block {
+        margin: 5% auto 60% auto; }
+        [data-page="regiestverify"] .page .page-content .mobile-check .content-block .verifycode-block .verifycode {
+          border-radius: 3px;
+          border: 1px solid #aaa;
+          width: 100%;
+          font-size: 3em;
+          background: none;
+          text-align: center;
+          display: block;
+          color: #F26531; }
+      [data-page="regiestverify"] .page .page-content .mobile-check .content-block a {
+        color: #FCFAF2; }
+        [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button {
+          border: 0px;
+          margin: 6% auto; }
+          [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.re-send {
+            display: none;
+            background-color: #545454;
+            border-radius: 2px; }
+            [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.re-send.active-state {
+              background: rgba(50, 220, 170, 0.8); }
+          [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.not-send {
+            display: none;
+            background-color: #545454;
+            border-radius: 2px; }
+            [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.not-send.active-state {
+              background: rgba(80, 80, 80, 0.8); }
+          [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.confirm {
+            background-color: #EE6531;
+            border-radius: 2px; }
+            [data-page="regiestverify"] .page .page-content .mobile-check .content-block a.button.confirm.active-state {
+              background: rgba(50, 120, 255, 0.8); }
+      [data-page="regiestverify"] .page .page-content .mobile-check .content-block .is-countdown {
+        display: none; }
+  @media (min-width: 992px) {
+    [data-page="regiestverify"] .page .page-content {
+      padding: 5% 20%; } }
+[data-page="regiestverify"] .verifycode-block:after {
+  display: block;
+  margin-top: 1%;
+  color: red;
+  font-size: 1.2em; }
+[data-page="regiestverify"] .verifycode-block.lengthError:after {
+  content: '* 長度錯誤'; }
+[data-page="regiestverify"] .verifycode-block.spacesError:after {
+  content: '* 勿包含空白字元'; }
+[data-page="regiestverify"] .verifycode-block.nullError:after {
+  content: '* 必填'; }
+
+/* =========================================== */
+/*     註冊/登入/修改密碼/密碼重置-成功        */
+/*     忘記密碼-發送成功                       */
+/* =========================================== */
+[data-page="regiestsuccess"] .navbar,
+[data-page="loginsuccess"] .navbar,
+[data-page="changepwdsuccess"] .navbar,
+[data-page="forgetpwdsuccess"] .navbar,
+[data-page="resetpwdsuccess"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="regiestsuccess"] .navbar::before,
+  [data-page="loginsuccess"] .navbar::before,
+  [data-page="changepwdsuccess"] .navbar::before,
+  [data-page="forgetpwdsuccess"] .navbar::before,
+  [data-page="resetpwdsuccess"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="regiestsuccess"] .navbar a.link,
+  [data-page="loginsuccess"] .navbar a.link,
+  [data-page="changepwdsuccess"] .navbar a.link,
+  [data-page="forgetpwdsuccess"] .navbar a.link,
+  [data-page="resetpwdsuccess"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="regiestsuccess"] .navbar:after,
+  [data-page="loginsuccess"] .navbar:after,
+  [data-page="changepwdsuccess"] .navbar:after,
+  [data-page="forgetpwdsuccess"] .navbar:after,
+  [data-page="resetpwdsuccess"] .navbar:after {
+    height: 0; }
+[data-page="regiestsuccess"] .page,
+[data-page="loginsuccess"] .page,
+[data-page="changepwdsuccess"] .page,
+[data-page="forgetpwdsuccess"] .page,
+[data-page="resetpwdsuccess"] .page {
+  background: #1e1e1e; }
+  [data-page="regiestsuccess"] .page .page-content,
+  [data-page="loginsuccess"] .page .page-content,
+  [data-page="changepwdsuccess"] .page .page-content,
+  [data-page="forgetpwdsuccess"] .page .page-content,
+  [data-page="resetpwdsuccess"] .page .page-content {
+    padding: 30% 15% 0 15%; }
+    [data-page="regiestsuccess"] .page .page-content .logo,
+    [data-page="loginsuccess"] .page .page-content .logo,
+    [data-page="changepwdsuccess"] .page .page-content .logo,
+    [data-page="forgetpwdsuccess"] .page .page-content .logo,
+    [data-page="resetpwdsuccess"] .page .page-content .logo {
+      display: block;
+      margin: 0% auto;
+      margin-bottom: 15%;
+      width: 50%; }
+    [data-page="regiestsuccess"] .page .page-content .title,
+    [data-page="loginsuccess"] .page .page-content .title,
+    [data-page="changepwdsuccess"] .page .page-content .title,
+    [data-page="forgetpwdsuccess"] .page .page-content .title,
+    [data-page="resetpwdsuccess"] .page .page-content .title {
+      text-align: center;
+      margin-bottom: 7%;
+      font-size: 24px;
+      font-weight: bold;
+      color: #FCFAF2; }
+    [data-page="regiestsuccess"] .page .page-content .regiest_success_btn, [data-page="regiestsuccess"] .page .page-content .login_success_btn, [data-page="regiestsuccess"] .page .page-content .forget_pwd_success_btn, [data-page="regiestsuccess"] .page .page-content .change_pwd_success_btn, [data-page="regiestsuccess"] .page .page-content .reset_pwd_success_btn,
+    [data-page="loginsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="loginsuccess"] .page .page-content .login_success_btn,
+    [data-page="loginsuccess"] .page .page-content .forget_pwd_success_btn,
+    [data-page="loginsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="loginsuccess"] .page .page-content .reset_pwd_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .login_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .forget_pwd_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .reset_pwd_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .login_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .forget_pwd_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .reset_pwd_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .login_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .forget_pwd_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .reset_pwd_success_btn {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 2px;
+      padding: 0;
+      color: #FCFAF2;
+      background-color: #EE6531;
+      font-weight: bold; }
+    [data-page="regiestsuccess"] .page .page-content .margin_top,
+    [data-page="loginsuccess"] .page .page-content .margin_top,
+    [data-page="changepwdsuccess"] .page .page-content .margin_top,
+    [data-page="forgetpwdsuccess"] .page .page-content .margin_top,
+    [data-page="resetpwdsuccess"] .page .page-content .margin_top {
+      margin-top: 22%; }
+    [data-page="regiestsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="loginsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .regiest_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .regiest_success_btn {
+      margin-bottom: 5%; }
+    [data-page="regiestsuccess"] .page .page-content .change_pwd_btn,
+    [data-page="loginsuccess"] .page .page-content .change_pwd_btn,
+    [data-page="changepwdsuccess"] .page .page-content .change_pwd_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .change_pwd_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .change_pwd_btn {
+      margin-top: 5%;
+      margin-bottom: 5%;
+      color: #404040;
+      background-color: #b7b7b7; }
+    [data-page="regiestsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="loginsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="changepwdsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="forgetpwdsuccess"] .page .page-content .change_pwd_success_btn,
+    [data-page="resetpwdsuccess"] .page .page-content .change_pwd_success_btn {
+      margin-top: 30%; }
+    [data-page="regiestsuccess"] .page .page-content .show-time,
+    [data-page="loginsuccess"] .page .page-content .show-time,
+    [data-page="changepwdsuccess"] .page .page-content .show-time,
+    [data-page="forgetpwdsuccess"] .page .page-content .show-time,
+    [data-page="resetpwdsuccess"] .page .page-content .show-time {
+      color: #d3d3d3;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30%; }
+      [data-page="regiestsuccess"] .page .page-content .show-time span,
+      [data-page="loginsuccess"] .page .page-content .show-time span,
+      [data-page="changepwdsuccess"] .page .page-content .show-time span,
+      [data-page="forgetpwdsuccess"] .page .page-content .show-time span,
+      [data-page="resetpwdsuccess"] .page .page-content .show-time span {
+        color: #f26531; }
+    [data-page="regiestsuccess"] .page .page-content .changepwd_p,
+    [data-page="loginsuccess"] .page .page-content .changepwd_p,
+    [data-page="changepwdsuccess"] .page .page-content .changepwd_p,
+    [data-page="forgetpwdsuccess"] .page .page-content .changepwd_p,
+    [data-page="resetpwdsuccess"] .page .page-content .changepwd_p {
+      color: #d3d3d3;
+      text-align: center;
+      font-size: 18px; }
+    @media (min-width: 550px) {
+      [data-page="regiestsuccess"] .page .page-content .page-content,
+      [data-page="loginsuccess"] .page .page-content .page-content,
+      [data-page="changepwdsuccess"] .page .page-content .page-content,
+      [data-page="forgetpwdsuccess"] .page .page-content .page-content,
+      [data-page="resetpwdsuccess"] .page .page-content .page-content {
+        padding: 20% 12%; } }
+    @media (min-width: 992px) {
+      [data-page="regiestsuccess"] .page .page-content .page-content,
+      [data-page="loginsuccess"] .page .page-content .page-content,
+      [data-page="changepwdsuccess"] .page .page-content .page-content,
+      [data-page="forgetpwdsuccess"] .page .page-content .page-content,
+      [data-page="resetpwdsuccess"] .page .page-content .page-content {
+        padding: 10% 10%; } }
+
+/* =========================================== */
+/*     密碼重置                                 */
+/* =========================================== */
+[data-page="resetpwd"] .navbar,
+[data-page="changepwd"] .navbar {
+  color: #eee;
+  background-image: url(../../image/appbar.png);
+  background-size: cover; }
+  [data-page="resetpwd"] .navbar::before,
+  [data-page="changepwd"] .navbar::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7; }
+  [data-page="resetpwd"] .navbar a.link,
+  [data-page="changepwd"] .navbar a.link {
+    color: #FCFAF2; }
+  [data-page="resetpwd"] .navbar:after,
+  [data-page="changepwd"] .navbar:after {
+    height: 0; }
+[data-page="resetpwd"] .page,
+[data-page="changepwd"] .page {
+  background: #1e1e1e; }
+  [data-page="resetpwd"] .page .page-content,
+  [data-page="changepwd"] .page .page-content {
+    padding: 0 15%;
+    padding-top: 44px; }
+    [data-page="resetpwd"] .page .page-content .logo,
+    [data-page="changepwd"] .page .page-content .logo {
+      display: block;
+      margin: 0% auto;
+      margin-bottom: 10%;
+      margin-top: 25%;
+      width: 30%; }
+    [data-page="resetpwd"] .page .page-content .title,
+    [data-page="changepwd"] .page .page-content .title {
+      text-align: center;
+      margin-bottom: 10%;
+      font-size: 24px;
+      font-weight: bold;
+      color: #FCFAF2; }
+    [data-page="resetpwd"] .page .page-content .change_pwd_btn, [data-page="resetpwd"] .page .page-content .reset_pwd_btn,
+    [data-page="changepwd"] .page .page-content .change_pwd_btn,
+    [data-page="changepwd"] .page .page-content .reset_pwd_btn {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 2px;
+      padding: 0;
+      color: #FCFAF2;
+      background-color: #EE6531;
+      font-weight: bold; }
+    [data-page="resetpwd"] .page .page-content .list-block ul,
+    [data-page="changepwd"] .page .page-content .list-block ul {
+      background: none; }
+      [data-page="resetpwd"] .page .page-content .list-block ul:before, [data-page="resetpwd"] .page .page-content .list-block ul:after,
+      [data-page="changepwd"] .page .page-content .list-block ul:before,
+      [data-page="changepwd"] .page .page-content .list-block ul:after {
+        height: 0; }
+    [data-page="resetpwd"] .page .page-content .list-block li,
+    [data-page="changepwd"] .page .page-content .list-block li {
+      margin-bottom: 5%;
+      background: #545454; }
+    [data-page="resetpwd"] .page .page-content .list-block li:first-child,
+    [data-page="changepwd"] .page .page-content .list-block li:first-child {
+      background: #4c3e3b; }
+    [data-page="resetpwd"] .page .page-content .list-block .item-inner:after,
+    [data-page="changepwd"] .page .page-content .list-block .item-inner:after {
+      width: 93%;
+      background-color: #444; }
+    [data-page="resetpwd"] .page .page-content .list-block .item-title.label,
+    [data-page="changepwd"] .page .page-content .list-block .item-title.label {
+      color: #F26531;
+      font-size: 13pt;
+      width: 25%; }
+    [data-page="resetpwd"] .page .page-content .list-block .item-media,
+    [data-page="changepwd"] .page .page-content .list-block .item-media {
+      color: slategray;
+      font-size: 13.5pt;
+      width: 35px;
+      background: none;
+      border-radius: 5px;
+      margin-top: 1.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      [data-page="resetpwd"] .page .page-content .list-block .item-media .fa,
+      [data-page="changepwd"] .page .page-content .list-block .item-media .fa {
+        font-size: 1.2em; }
+    [data-page="resetpwd"] .page .page-content .list-block input[type=time], [data-page="resetpwd"] .page .page-content .list-block input[type=number], [data-page="resetpwd"] .page .page-content .list-block input[type=search], [data-page="resetpwd"] .page .page-content .list-block input[type=text], [data-page="resetpwd"] .page .page-content .list-block input[type=password], [data-page="resetpwd"] .page .page-content .list-block input[type=email], [data-page="resetpwd"] .page .page-content .list-block input[type=tel], [data-page="resetpwd"] .page .page-content .list-block input[type=url], [data-page="resetpwd"] .page .page-content .list-block input[type=date], [data-page="resetpwd"] .page .page-content .list-block input[type=datetime-local],
+    [data-page="changepwd"] .page .page-content .list-block input[type=time],
+    [data-page="changepwd"] .page .page-content .list-block input[type=number],
+    [data-page="changepwd"] .page .page-content .list-block input[type=search],
+    [data-page="changepwd"] .page .page-content .list-block input[type=text],
+    [data-page="changepwd"] .page .page-content .list-block input[type=password],
+    [data-page="changepwd"] .page .page-content .list-block input[type=email],
+    [data-page="changepwd"] .page .page-content .list-block input[type=tel],
+    [data-page="changepwd"] .page .page-content .list-block input[type=url],
+    [data-page="changepwd"] .page .page-content .list-block input[type=date],
+    [data-page="changepwd"] .page .page-content .list-block input[type=datetime-local] {
+      color: #FCFAF2;
+      font-size: 13pt; }
+    [data-page="resetpwd"] .page .page-content .list-block select,
+    [data-page="resetpwd"] .page .page-content .list-block textarea,
+    [data-page="changepwd"] .page .page-content .list-block select,
+    [data-page="changepwd"] .page .page-content .list-block textarea {
+      color: #FCFAF2;
+      font-size: 13pt;
+      height: 100%; }
+  @media (min-width: 992px) {
+    [data-page="resetpwd"] .page .page-content,
+    [data-page="changepwd"] .page .page-content {
+      padding: 5% 20%; } }
+  [data-page="resetpwd"] .page .toolbar:before,
+  [data-page="changepwd"] .page .toolbar:before {
+    height: 0; }
+  [data-page="resetpwd"] .page .toolbar.toolbar-bottom,
+  [data-page="changepwd"] .page .toolbar.toolbar-bottom {
+    background: #F26531;
+    position: fixed; }
+    [data-page="resetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner,
+    [data-page="changepwd"] .page .toolbar.toolbar-bottom .toolbar-inner {
+      padding: 0; }
+      [data-page="resetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a,
+      [data-page="changepwd"] .page .toolbar.toolbar-bottom .toolbar-inner a {
+        width: 100%;
+        height: 100%;
+        color: #FCFAF2;
+        font-size: 1.3em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        [data-page="resetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state,
+        [data-page="changepwd"] .page .toolbar.toolbar-bottom .toolbar-inner a.active-state {
+          background: #a26531; }
+        [data-page="resetpwd"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover,
+        [data-page="changepwd"] .page .toolbar.toolbar-bottom .toolbar-inner a:hover {
+          background: rgba(255, 130, 80, 0.9); }
+[data-page="resetpwd"] .passwordold-block:after,
+[data-page="resetpwd"] .passwordnew-block:after,
+[data-page="resetpwd"] .passwordnewconfirm-block:after,
+[data-page="resetpwd"] .verifycode-block:after,
+[data-page="resetpwd"] .password-block:after,
+[data-page="resetpwd"] .passwordconfirm-block:after,
+[data-page="changepwd"] .passwordold-block:after,
+[data-page="changepwd"] .passwordnew-block:after,
+[data-page="changepwd"] .passwordnewconfirm-block:after,
+[data-page="changepwd"] .verifycode-block:after,
+[data-page="changepwd"] .password-block:after,
+[data-page="changepwd"] .passwordconfirm-block:after {
+  display: block;
+  margin-top: 1%;
+  margin-left: 15%;
+  color: red; }
+[data-page="resetpwd"] .verifycode-block.lengthError:after,
+[data-page="changepwd"] .verifycode-block.lengthError:after {
+  content: '* 長度錯誤'; }
+[data-page="resetpwd"] .passwordold-block.spacesError:after,
+[data-page="resetpwd"] .passwordnew-block.spacesError:after,
+[data-page="resetpwd"] .passwordnewconfirm-block.spacesError:after,
+[data-page="resetpwd"] .verifycode-block.spacesError:after,
+[data-page="resetpwd"] .password-block.spacesError:after,
+[data-page="resetpwd"] .passwordconfirm-block.spacesError:after,
+[data-page="changepwd"] .passwordold-block.spacesError:after,
+[data-page="changepwd"] .passwordnew-block.spacesError:after,
+[data-page="changepwd"] .passwordnewconfirm-block.spacesError:after,
+[data-page="changepwd"] .verifycode-block.spacesError:after,
+[data-page="changepwd"] .password-block.spacesError:after,
+[data-page="changepwd"] .passwordconfirm-block.spacesError:after {
+  content: '* 勿包含空白字元'; }
+[data-page="resetpwd"] .passwordold-block.nullError:after,
+[data-page="resetpwd"] .passwordnew-block.nullError:after,
+[data-page="resetpwd"] .passwordnewconfirm-block.nullError:after,
+[data-page="resetpwd"] .verifycode-block.nullError:after,
+[data-page="resetpwd"] .password-block.nullError:after,
+[data-page="resetpwd"] .passwordconfirm-block.nullError:after,
+[data-page="changepwd"] .passwordold-block.nullError:after,
+[data-page="changepwd"] .passwordnew-block.nullError:after,
+[data-page="changepwd"] .passwordnewconfirm-block.nullError:after,
+[data-page="changepwd"] .verifycode-block.nullError:after,
+[data-page="changepwd"] .password-block.nullError:after,
+[data-page="changepwd"] .passwordconfirm-block.nullError:after {
+  content: '* 必填'; }
+
+/* =========================================== */
+/*                登出作業                     */
+/* =========================================== */
+[data-page="logout"] .navbar {
+  visibility: hidden; }
+[data-page="logout"] .page {
+  background-image: url(../../image/bg_gradient.png);
+  background-size: cover; }
+  @media (min-width: 992px) {
+    [data-page="logout"] .page {
+      background: #1e1e1e;
+      margin: 0 auto; } }
+
+/*# sourceMappingURL=login-style.css.map */

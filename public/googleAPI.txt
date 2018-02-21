@@ -1,0 +1,13 @@
+https://accounts.google.com/o/oauth2/auth?response_type=token&client_id=344630307125-hohabs1ktlmagr9f2lokergoruui2tdq.apps.googleusercontent.com&redirect_uri=http://stage-tw-member.iscarmg.com/test&scope=https://www.googleapis.com/auth/userinfo.profile + https://www.googleapis.com/auth/userinfo.email
+
+
+
+https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=344630307125-hohabs1ktlmagr9f2lokergoruui2tdq.apps.googleusercontent.com&redirect_uri=http://stage-tw-member.iscarmg.com/test&scope=https://www.googleapis.com/auth/userinfo.profile + https://www.googleapis.com/auth/userinfo.email
+
+
+
+https://www.googleapis.com/oauth2/v3/userinfo?alt=json&access_token=ya29.GmB2BJA2C4bhbJLr4l0O4ZxbwCQ9zNX1u1O-gkXOSol2H9Li0-D_GmCuzN5Mea3LgsccPuN3fHMutrvm03HUtePs4AfdEEHEYCtDOHYZ6Zc6T1cfJEwoX3qfE_DzX-1XxCM
+
+
+
+https://www.googleapis.com/plus/v1/people/?access_token=ya29.GlxxBELlBAB6aD32RKDp5Ly58dgx8ZPUDXG3MK0joKfp9JtrW3CWRbE4FWu37ggimEDbB8CEAmLjcYc3aFit7aaIoSFimiY-wNOvjZB2rdx_3WboonZY4C_D5zWU9w

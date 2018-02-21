@@ -1,0 +1,1914 @@
+@charset "UTF-8";
+
+//navbar style
+@mixin main-navbar {
+    color: #eee;
+
+    //background: -webkit-linear-gradient(-45deg, rgba(55, 55, 55, 1) 30%, rgba(150, 150, 150, 1) 50%, rgba(55, 55, 55, 1) 70%);
+    //background: -moz-linear-gradient(-45deg, rgba(55, 55, 55, 1) 30%, rgba(150, 150, 150, 1) 50%, rgba(55, 55, 55, 1) 70%);
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+}
+
+//navbar::before style
+@mixin main-navbar-before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../image/appbar.png);
+    background-size: cover;
+    content: ' ';
+    opacity: 0.7;
+}
+
+@mixin navbar-left {
+    background-image: url(../../image/back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+//page background
+@mixin main-page {
+    background-image: url(../../image/bg_gradient.png);
+
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-attachment: fixed;
+    background-size: cover;
+
+    @media (min-width: 992px) {
+        background: #1e1e1e;
+        margin: 0 auto;
+    }
+}
+//page background 純色
+@mixin main-page-pure {
+    background: #1e1e1e;
+}
+
+//置中
+@mixin both-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+$main-color: #F26531;
+$white: #FCFAF2;
+
+body {
+    font-family: Microsoft JhengHei !important;
+    background: #151515;
+
+    //@include main-page();
+}
+
+@media (min-width: 992px) {
+    body {
+        &.framework7-root {
+            width: 40%;
+            margin: 0 auto;
+            background: #252525;
+            box-shadow: 2px 2px 2px rgba(2%, 2%, 2%, 0.9), 4px 4px 6px rgba(2%, 2%, 2%, 0.7), 6px 6px 12px rgba(2%, 2%, 2%, 0.7);
+        }
+    }
+}
+
+.navbar {
+    background: #151515;
+
+    &:after {
+        background: #151515;
+    }
+}
+
+.page {
+    @include main-page-pure;
+}
+
+.modal-text{
+    input{
+        padding: 2%;
+        font-size: 1.3em;
+        width: 90%;
+        margin: 5% 0;
+    }
+}
+
+.noUse {
+    visibility: hidden;
+}
+
+/* input placeholder颜色 */
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+.popup {
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.95);
+
+    &.popup-about,
+    &.popup-privacy {
+        .close-popup {
+            position: absolute;
+            font-size: 2em;
+            top: 1%;
+            right: 4%;
+            color: #333;
+        }
+
+        .content-block {
+            a {
+                color: #6d6d72;
+            }
+        }
+    }
+}
+
+/* 3D卷軸上滑視窗 */
+
+.picker-modal {
+    background: #DDD;
+
+    .toolbar {
+        background: #252525;
+        color: #eee;
+
+        &:before {
+            height: 2px;
+            background: #333;
+        }
+
+        &:after {
+            height: 0px;
+        }
+
+        a {
+            color: #fff;
+            width: 30px;
+            padding-left: 15px;
+        }
+    }
+}
+
+.picker-item {
+    font-size: 15.5pt;
+
+    &.picker-selected {
+        color: $main-color;
+        font-size: 17.5pt;
+    }
+}
+
+.picker-items-col.picker-items-col-divider {
+    color: $main-color;
+    font-size: 17.5pt;
+}
+
+.picker-center-highlight {
+    background: -webkit-linear-gradient(-30deg, rgba(100, 100, 100, 0.3) 40%, rgba(140, 140, 140, 0.3) 48%, rgba(200, 200, 200, 0.3) 53%, rgba(140, 140, 140, 0.3) 58%, rgba(100, 100, 100, 0.3) 66%);
+    background: -moz-linear-gradient(-30deg, rgba(100, 100, 100, 0.3) 40%, rgba(140, 140, 140, 0.3) 48%, rgba(200, 200, 200, 0.3) 53%, rgba(140, 140, 140, 0.3) 58%, rgba(100, 100, 100, 0.3) 66%);
+    border-top: 1px solid rgba(140, 140, 140, 0.3);
+    box-shadow: 2px 2px 2px rgba(50%, 50%, 50%, 0.7), 4px 4px 6px rgba(50%, 50%, 50%, 0.5), 6px 6px 12px rgba(50%, 50%, 50%, 0.5);
+}
+
+.toolbar .link {
+    padding: 0;
+}
+
+/* =========================================== */
+
+/*     視窗標題                                */
+
+/* =========================================== */
+
+.modal-title {
+    color: $main-color;
+    font-weight: bold;
+
+    /*border-bottom: 1px solid #999;*/
+    + .modal-text {
+        margin-top: 2%;
+        font-size: 12pt;
+    }
+}
+
+.modal-inner:after {
+    background-color: #999;
+}
+
+.modal-button {
+    background: #ddd;
+    font-weight: bold;
+
+    &.active-state {
+        background-color: #aaa;
+    }
+}
+
+[data-page="login"],
+[data-page="login_b"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            //@include main-navbar-before();
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+
+        .backBtn {
+            @include navbar-left;
+        }
+    }
+
+    .page {
+        @include main-page;
+
+        .page-content {
+            padding: 0 12%;
+
+            .logo {
+                display: block;
+                margin: 0% auto;
+                margin-top: 30%;
+                margin-bottom: 16%;
+            }
+
+            .list-block {
+                margin: 0;
+
+                ul {
+                    background: none;
+
+                    &:before,
+                    &:after {
+                        height: 0;
+                    }
+                }
+
+                li {
+                    margin-bottom: 5%;
+                    background: #d2d2d2;
+                    &:last-child{
+                        margin-top:-2.5%;
+                        margin-bottom:2.5%;
+                    }
+
+                    .item-content {
+                        padding-left: 0;
+
+                        .item-media {
+                            padding-top: 10px;
+                            padding-left: 5%;
+                            padding-right: 5%;
+
+                            @include both-center;
+                        }
+
+                        .item-inner {
+                            margin-left: 0;
+                            &:last-child{
+                                &:after{
+                                    background:none;
+                                }
+                            }
+                            .showpwd{
+                                cursor:pointer;
+                                height: 44px;
+                                position: absolute;
+                                top: 0;
+                                line-height: 44px;
+                                width: 44px;
+                                text-align: center;
+                                color: #545454;
+                                right: 0;
+                                i{
+                                    font-size:1.5em;
+                                }
+                            }
+                        }
+
+                        .item-title.label {
+                            color: $main-color;
+                            font-size: 13pt;
+                            width: 25%;
+                        }
+                    }
+                }
+
+                input {
+                    &[type=time],
+                    &[type=number],
+                    &[type=search],
+                    &[type=text],
+                    &[type=password],
+                    &[type=email],
+                    &[type=tel],
+                    &[type=url],
+                    &[type=date],
+                    &[type=datetime-local] {
+                        color: #333;
+                        font-size: 13pt;
+                    }
+                }
+
+                select,
+                textarea {
+                    color: #333;
+                    font-size: 13pt;
+                    height: 100%;
+                }
+            }
+
+            .login-btn {
+                margin: 0 auto;
+                display: block;
+                border: 0;
+                border-radius: 2px;
+                background: $main-color;
+                background: -webkit-linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+                background: -moz-linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+                background: linear-gradient(rgba(242, 101, 49, 0.75), rgba(242, 101, 49, 0.7));
+                color: $white;
+
+                &.active-state {
+                    background: -webkit-linear-gradient(rgba(255, 130, 49, 0.75), rgba(255, 130, 49, 0.7));
+                    background: -moz-linear-gradient(rgba(255, 130, 49, 0.75), rgba(255, 130, 49, 0.7));
+                }
+            }
+
+            .registered_foget {
+                margin-top: 10%;
+                font-weight: bold;
+
+                a {
+                    color: $main-color;
+
+                    &.forget_password {
+                        float: right;
+                    }
+                }
+            }
+
+            .other-login-note {
+                margin: 10% 0;
+                text-align: center;
+                color: #aaa;
+                div{
+                    margin:0;
+                    display:inline-block;
+                    img{
+                        vertical-align:middle;
+                    }
+                }
+                div:first-child{
+                    padding-right:5px;
+                }
+                div:last-child{
+                    padding-left:5px;
+                }
+                div:nth-child(odd){
+                    width:calc((100% - 94px)/2);
+                }
+            }
+
+            .other-login-block {
+                .fb_login {
+                    background: #4c69ba;
+                    background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+                    background: -moz-linear-gradient(#4c69ba, #3b55a0);
+                    background: linear-gradient(rgba(76, 105, 186, 0.95), rgba(76, 105, 186, 0.9));
+                    color: #FFF;
+                    border: 0;
+                    border-radius: 2px;
+
+                    &.active-state {
+                        background: #4c69ba;
+                        background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+                        background: linear-gradient(#334785, #29396a);
+                        color: #CCC;
+                    }
+                }
+
+            }
+
+            .bottom-block {
+                margin-top: 20%;
+                text-align: center;
+                color: $white;
+                a {
+                    color: $white;
+                    margin: 0 15px;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+    }
+}
+
+/*使用條款*/
+
+.authorization-popup {
+    overflow: hidden;
+
+    .content-block {
+        margin: 5% 0;
+        height: 100%;
+
+        .title {
+            color: $main-color;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .authorization-content {
+            font-size: 1em;
+            line-height: 2;
+            overflow-y: auto;
+            height: 100%;
+            margin: 5% 0;
+
+            .btns {
+                margin-top: 10%;
+                height: 25%;
+                padding: 4%;
+
+                .col-100 {
+                    width: 100%;
+                    position: initial;
+                    color: firebrick;
+                    text-align: center;
+                    font-size: 1.3em;
+                    border-radius: 5px;
+                    box-shadow: 1px 1px 4px rgba(40%, 40%, 40%, 0.9), 2px 2px 10px rgba(40%, 40%, 40%, 0.7), 1px 4px 15px rgba(40%, 40%, 40%, 0.7);
+                    background: rgba(80%, 80%, 80%, 0.7);
+
+                    &.agree {
+                        color: dodgerblue;
+                    }
+
+                    &.active-state {
+                        margin-top: 1px;
+                        box-shadow: none;
+                    }
+                }
+
+                .col-10 {
+                    width: 10%;
+                }
+            }
+        }
+    }
+}
+
+/* =========================================== */
+
+/*     首頁                                     */
+
+/* =========================================== */
+
+[data-page="index"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page;
+
+        .page-content {
+            padding: 0 5%;
+            padding-top: 44px;
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+    }
+}
+
+/* =========================================== */
+
+/*     註冊選擇                                 */
+
+/* =========================================== */
+
+[data-page="regiest"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page;
+
+        .page-content {
+            padding: 40% 15%;
+            .logo {
+                display: block;
+                margin: 0% auto;
+                margin-bottom: 15%;
+                width:35%;
+            }
+            .title{
+                text-align:center;
+                margin-bottom: 35%;
+                font-size:24px;
+                font-weight:bold;
+                color: $white;
+            }
+            .no-gutter{
+                .iscar_regiest_btn,.fb_regiest_btn{
+                    width:100%;
+                    min-height:44px;
+                    border:0;
+                    border-radius: 2px;
+                    padding:0;
+                    margin-top:5%;
+                    color: $white;
+                    img{
+                        height:44px;
+                        // float:left;
+                        position:absolute;
+                        left:0;
+                        z-index:1;
+                    }
+                    div{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        margin:auto;
+                        z-index:9;
+                    }
+                }
+                .iscar_regiest_btn{
+                    // background-image: url(../../image/mem_btn_signup_iscar.png);
+                    // background-repeat: no-repeat;
+                    background-color: #EE6531;
+                    position:relative;
+                }
+                .fb_regiest_btn{
+                    // background-image: url(../../image/mem_btn_signup_fb.png);
+                    // background-repeat: no-repeat;
+                    // background-attachment: fixed;
+                    // background-size: cover;
+                    background-color: #3C5A9A;
+                    position:relative;
+                }
+
+            }
+        }
+
+        @media (min-width: 550px) {
+            .page-content {
+                padding: 20% 12%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 15% 10%;
+            }
+        }
+    }
+}
+
+/* =========================================== */
+
+/*     一般註冊                                 */
+
+/* =========================================== */
+
+[data-page="regiestiscar"],
+[data-page="regiestthirdparty"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page;
+        background: #1e1e1e;
+        overflow:auto;
+
+        .page-content {
+            padding: 0 15%;
+            padding-top: 44px;
+            .regiest_btn{
+                width:100%;
+                min-height:44px;
+                border:0;
+                border-radius: 2px;
+                padding:0;
+                color: $white;
+                background-color: #EE6531;
+                font-weight:bold;
+                margin-bottom:15%;
+            }
+            .font_style{
+                font-size:20px;
+                color:$white;
+                margin-top:10%;
+                text-align:center;
+            }
+            .list-block {
+                ul {
+                    background: none;
+
+                    &:before,
+                    &:after {
+                        height: 0;
+                    }
+                }
+
+                li {
+                    margin-bottom: 5%;
+                    background: #545454;
+                }
+
+                .item-inner:after {
+                    width: 93%;
+                    background-color: #545454;
+                }
+                .iscarpolicy_style .item-inner:after {
+                    background-color: #1e1e1e;
+                }
+
+                .iscarpolicy_style .item-inner{
+                    padding-right:0;
+                    color:$white;
+                }
+
+                .iscarpolicy_style .item-content{
+                    padding-left:0;
+                }
+
+                .item-title.label {
+                    color: #d3d3d3;
+                    font-size: 13pt;
+                    width: 25%;
+                }
+
+                .item-media {
+                    color: slategray;
+                    font-size: 13.5pt;
+                    width: 35px;
+                    background: none;
+                    border-radius: 5px;
+                    margin-top: 1.5%;
+
+                    @include both-center;
+
+                    .fa {
+                        font-size: 1.2em;
+                    }
+                }
+
+                input {
+                    &[type=time],
+                    &[type=number],
+                    &[type=search],
+                    &[type=text],
+                    &[type=password],
+                    &[type=email],
+                    &[type=tel],
+                    &[type=url],
+                    &[type=date],
+                    &[type=datetime-local] {
+                        color: $white;
+                        font-size: 13pt;
+                    }
+                }
+
+                select,
+                textarea {
+                    color: $white;
+                    font-size: 13pt;
+                    height: 100%;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+
+        .toolbar {
+            &:before {
+                height: 0;
+            }
+
+            &.toolbar-bottom {
+                background: $main-color;
+                position: fixed;
+
+                .toolbar-inner {
+                    padding: 0;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        font-size: 1.3em;
+
+                        @include both-center;
+
+                        &.active-state {
+                            background: #a26531;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 130, 80, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .account-block:after,
+    .password-block:after,
+    .passwordconfirm-block:after,
+    .nickname-block:after,
+    .countrycode-block:after,
+    .cellphone-block:after {
+        display: block;
+        margin-top: 1%;
+        margin-left: 15%;
+        color: red;
+    }
+
+    .cellphone-block.lengthError:after {
+        content: '* 長度錯誤';
+    }
+
+    .account-block.lengthError:after {
+        content: '* 長度勿超過64個字';
+    }
+
+    .nickname-block.lengthError:after {
+        content: '* 長度勿超過15個字';
+    }
+
+    .account-block.spacesError:after,
+    .password-block.spacesError:after,
+    .passwordconfirm-block.spacesError:after,
+    .nickname-block.spacesError:after,
+    .countrycode-block.spacesError:after,
+    .cellphone-block.spacesError:after {
+        content: '* 勿包含空白字元';
+    }
+
+    .account-block.formatError:after {
+        content: '* 格式錯誤';
+    }
+
+    .iscarpolicy_style.nullError:after {
+        display: block;
+        margin-top: 1%;
+        margin-left: 15px;
+        color: red;
+        content: '* 請打勾';
+    }
+
+    .account-block.nullError:after,
+    .password-block.nullError:after,
+    .passwordconfirm-block.nullError:after,
+    .nickname-block.nullError:after,
+    .countrycode-block.nullError:after,
+    .cellphone-block.nullError:after {
+        content: '* 必填';
+    }
+}
+
+/* =========================================== */
+
+/*     社群會員註冊                              */
+
+/* =========================================== */
+
+[data-page="social-regiest"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page;
+
+        .page-content {
+            padding: 0 5%;
+            padding-top: 44px;
+
+            .list-block {
+                ul {
+                    background: none;
+
+                    &:before,
+                    &:after {
+                        height: 0;
+                    }
+                }
+
+                li {
+                    padding-bottom: 4%;
+                }
+
+                .item-inner:after {
+                    width: 93%;
+                    background-color: #444;
+                }
+
+                .item-title.label {
+                    color: $main-color;
+                    font-size: 13pt;
+                    width: 25%;
+                }
+
+                .item-media {
+                    color: slategray;
+                    font-size: 13.5pt;
+                    width: 35px;
+                    background: none;
+                    border-radius: 5px;
+                    margin-top: 1.5%;
+
+                    @include both-center;
+
+                    .fa {
+                        font-size: 1.2em;
+                    }
+                }
+
+                input {
+                    &[type=time],
+                    &[type=number],
+                    &[type=search],
+                    &[type=text],
+                    &[type=password],
+                    &[type=email],
+                    &[type=tel],
+                    &[type=url],
+                    &[type=date],
+                    &[type=datetime-local] {
+                        color: $white;
+                        font-size: 13pt;
+                    }
+                }
+
+                select,
+                textarea {
+                    color: $white;
+                    font-size: 13pt;
+                    height: 100%;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+
+        .toolbar {
+            &:before {
+                height: 0;
+            }
+
+            &.toolbar-bottom {
+                background: $main-color;
+                position: fixed;
+
+                .toolbar-inner {
+                    padding: 0;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        font-size: 1.3em;
+
+                        @include both-center;
+
+                        &.active-state {
+                            background: #a26531;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 130, 80, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nickname-block:after,
+    .countrycode-block:after,
+    .cellphone-block:after {
+        display: block;
+        margin-top: 1%;
+        margin-left: 15%;
+        color: red;
+    }
+
+    .cellphone-block.lengthError:after {
+        content: '* 長度錯誤';
+    }
+
+    .nickname-block.lengthError:after {
+        content: '* 長度勿超過15個字';
+    }
+
+    .nickname-block.spacesError:after,
+    .countrycode-block.spacesError:after,
+    .cellphone-block.spacesError:after {
+        content: '* 勿包含空白字元';
+    }
+
+    .nickname-block.nullError:after,
+    .countrycode-block.nullError:after,
+    .cellphone-block.nullError:after {
+        content: '* 必填';
+    }
+}
+
+/*一般會員註冊&手機設定*/
+
+.member-registered-popup,
+.mobile-set-popup,
+.forget-password-popup {
+    overflow: hidden;
+
+    .close-popup {
+        position: absolute;
+        font-size: 2em;
+        top: 1%;
+        right: 4%;
+        color: #333;
+    }
+
+    .content-block {
+        margin: 5% 0%;
+        height: 100%;
+
+        .title {
+            color: $main-color;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .list-block {
+            ul {
+                background: none;
+
+                &:before,
+                &:after {
+                    height: 0;
+                }
+            }
+
+            li {
+                padding-bottom: 4%;
+            }
+
+            .item-inner:after {
+                width: 93%;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .region-block {
+                padding-bottom: 1%;
+
+                .item-inner:after {
+                    background-color: rgba(0, 0, 0, 0);
+                }
+            }
+
+            .chip-block {
+                margin: 0 55px;
+
+                .chip {
+                    margin: 0 10px;
+                    background: dimgray;
+                    font-size: 1em;
+                    padding: 15px;
+                    line-height: 30px;
+                }
+            }
+
+            .item-title.label {
+                color: #222;
+                font-size: 13pt;
+                width: 25%;
+            }
+
+            .item-media {
+                color: slategray;
+                font-size: 13.5pt;
+                width: 35px;
+                background: none;
+                border-radius: 5px;
+                margin-top: 1.5%;
+
+                @include both-center;
+
+                .fa {
+                    font-size: 1.2em;
+                }
+            }
+
+            input {
+                &[type=time],
+                &[type=number],
+                &[type=search],
+                &[type=text],
+                &[type=password],
+                &[type=email],
+                &[type=tel],
+                &[type=url],
+                &[type=date],
+                &[type=datetime-local] {
+                    color: steelblue;
+                    font-size: 13pt;
+                    border-bottom: 1px solid #999;
+                    padding-left: 10px;
+                }
+            }
+
+            select {
+                color: #777;
+                font-size: 13pt;
+                border-bottom: 1px solid #999;
+                width: 60px;
+                margin-right: 15px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .toolbar {
+        &:before {
+            height: 0;
+        }
+
+        &.toolbar-bottom {
+            background: $main-color;
+            position: fixed;
+
+            .toolbar-inner {
+                padding: 0;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: $white;
+                    font-size: 1.3em;
+
+                    @include both-center;
+
+                    &.active-state {
+                        background: #a26531;
+                    }
+
+                    &:hover {
+                        background: rgba(255, 130, 80, 0.9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*手機認證*/
+
+.mobile-check-popup {
+    overflow: hidden;
+
+    .close-popup {
+        position: absolute;
+        font-size: 2em;
+        top: 1%;
+        right: 4%;
+        color: #333;
+    }
+
+    .content-block {
+        margin: 5% 10%;
+        height: 100%;
+
+        .title {
+            color: $main-color;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .verification_code {
+            border: 0px;
+            border-bottom: 1px solid #aaa;
+            width: 100%;
+            font-size: 3em;
+            background: none;
+            margin: 20% auto;
+            text-align: center;
+            display: block;
+            margin-top: 50%;
+        }
+
+        a {
+            color: $white;
+
+            &.button {
+                border: 0px;
+
+                &.re-send {
+                    background: rgba(50, 180, 150, 0.8);
+
+                    &.active-state {
+                        background: rgba(50, 220, 170, 0.8);
+                    }
+                }
+
+                &.confirm {
+                    background: rgba(50, 100, 200, 0.8);
+
+                    &.active-state {
+                        background: rgba(50, 120, 255, 0.8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =========================================== */
+
+/*     忘記密碼                                 */
+
+/* =========================================== */
+
+[data-page="forgetpwd"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page-pure;
+
+        .page-content {
+            padding: 0 15%;
+            padding-top: 44px;
+            .font_style{
+                font-size:20px;
+                color:$white;
+                margin-bottom:15%;
+                margin-top:32%;
+                text-align:center;
+            }
+            .forget_pwd_btn{
+                width:100%;
+                min-height:44px;
+                border:0;
+                border-radius: 2px;
+                padding:0;
+                color: $white;
+                background-color: #EE6531;
+                font-weight:bold;
+            }
+            &.forgetpwd-content {
+
+                .content-block {
+                    padding:0;
+                    .item_input{
+                        input{
+                            border-radius: 3px;
+                            border: 1px solid #aaa;
+                            width: 100%;
+                            font-size: 16px;
+                            background: none;
+                            text-align: center;
+                            display: block;
+                            color: #F26531;
+                            height:52px;
+                        }
+
+                    }
+                    .item-inner{
+                        margin:5% auto calc(60% - 17px) auto;
+                    }
+                    .item-inner:after {
+                        width: 93%;
+                        background-color: rgba(0, 0, 0, 0);
+                    }
+
+                    .region-block {
+                        padding-bottom: 1%;
+
+                        .item-inner:after {
+                            background-color: rgba(0, 0, 0, 0);
+                        }
+                    }
+
+                    .chip-block {
+                        margin: 0 55px;
+
+                        .chip {
+                            margin: 0 10px;
+                            background: dimgray;
+                            font-size: 1em;
+                            padding: 15px;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .item-title.label {
+                        color: #222;
+                        font-size: 13pt;
+                        width: 25%;
+                    }
+
+                    .item-media {
+                        color: slategray;
+                        font-size: 13.5pt;
+                        width: 35px;
+                        background: none;
+                        border-radius: 5px;
+                        margin-top: 1.5%;
+
+                        @include both-center;
+
+                        .fa {
+                            font-size: 1.2em;
+                        }
+                    }
+
+                    input {
+                        &[type=time],
+                        &[type=number],
+                        &[type=search],
+                        &[type=text],
+                        &[type=password],
+                        &[type=email],
+                        &[type=tel],
+                        &[type=url],
+                        &[type=date],
+                        &[type=datetime-local] {
+                            // color: $white;
+                            // font-size: 13pt;
+                            // padding-left: 10px;
+                        }
+                    }
+
+                    select {
+                        color: #777;
+                        font-size: 13pt;
+                        border-bottom: 1px solid #999;
+                        width: 60px;
+                        margin-right: 15px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+
+                &.forgetpwd-content {
+                    margin-top: 20%;
+                }
+            }
+        }
+
+        .toolbar {
+            &:before {
+                height: 0;
+            }
+
+            &.toolbar-bottom {
+                background: $main-color;
+                position: fixed;
+
+                .toolbar-inner {
+                    padding: 0;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        font-size: 1.3em;
+
+                        @include both-center;
+
+                        &.active-state {
+                            background: #a26531;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 130, 80, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .account-block:after {
+        display: block;
+        margin-top: 1%;
+        margin-left: 15%;
+        color: red;
+    }
+
+    .account-block.lengthError:after {
+        content: '* 長度勿超過64個字';
+    }
+
+    .account-block.spacesError:after {
+        content: '* 勿包含空白字元';
+    }
+
+    .account-block.formatError:after {
+        content: '* 格式錯誤';
+    }
+
+    .account-block.nullError:after {
+        content: '* 必填';
+    }
+}
+
+/* =========================================== */
+
+/*     手機驗證                                 */
+
+/* =========================================== */
+
+[data-page="regiestverify"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page-pure;
+
+        .page-content {
+            padding: 0 15%;
+            padding-top: 44px;
+            .font_style{
+                font-size:20px;
+                color:$white;
+                margin-top:40%;
+                text-align:center;
+            }
+            .mobile-check {
+
+                .content-block {
+                    padding:0;
+                    .title {
+                        color: $main-color;
+                        font-size: 1.5em;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    .verifycode-block {
+                        margin: 5% auto 60% auto;
+
+                        .verifycode {
+                            border-radius:3px;
+                            border: 1px solid #aaa;
+                            width: 100%;
+                            font-size: 3em;
+                            background: none;
+                            text-align: center;
+                            display: block;
+                            color: $main-color;
+                        }
+                    }
+
+                    a {
+                        color: $white;
+
+                        &.button {
+                            border: 0px;
+
+                            margin: 6% auto;
+
+                            &.re-send {
+                                display: none;
+                                background-color: #545454;
+                                // color:#a8a8a8;
+                                border-radius:2px;
+                                &.active-state {
+                                    background: rgba(50, 220, 170, 0.8);
+                                }
+                            }
+
+                            &.not-send {
+                                display: none;
+                                background-color: #545454;
+                                border-radius:2px;
+                                &.active-state {
+                                    background: rgba(80, 80, 80, 0.8);
+                                }
+                            }
+
+                            &.confirm {
+                                background-color: #EE6531;
+                                border-radius:2px;
+                                &.active-state {
+                                    background: rgba(50, 120, 255, 0.8);
+                                }
+                            }
+                        }
+                    }
+
+                    .is-countdown {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+    }
+
+    .verifycode-block:after {
+        display: block;
+        margin-top: 1%;
+        color: red;
+        font-size: 1.2em;
+    }
+
+    .verifycode-block.lengthError:after {
+        content: '* 長度錯誤';
+    }
+
+    .verifycode-block.spacesError:after {
+        content: '* 勿包含空白字元';
+    }
+
+    .verifycode-block.nullError:after {
+        content: '* 必填';
+    }
+}
+
+/* =========================================== */
+
+/*     註冊/登入/修改密碼/密碼重置-成功        */
+/*     忘記密碼-發送成功                       */
+
+/* =========================================== */
+
+[data-page="regiestsuccess"],
+[data-page="loginsuccess"],
+[data-page="changepwdsuccess"],
+[data-page="forgetpwdsuccess"],
+[data-page="resetpwdsuccess"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page-pure;
+
+        .page-content {
+            padding: 30% 15% 0 15%;
+            .logo {
+                display: block;
+                margin: 0% auto;
+                margin-bottom: 15%;
+                width:50%;
+            }
+            .title{
+                text-align:center;
+                margin-bottom: 7%;
+                font-size:24px;
+                font-weight:bold;
+                color: $white;
+            }
+            .regiest_success_btn, .login_success_btn, .forget_pwd_success_btn, .change_pwd_success_btn, .reset_pwd_success_btn{
+                width:100%;
+                min-height:44px;
+                border:0;
+                border-radius: 2px;
+                padding:0;
+                color: $white;
+                background-color: #EE6531;
+                font-weight:bold;
+            }
+            .margin_top{
+                margin-top:22%;
+            }
+            .regiest_success_btn{
+                margin-bottom:5%;
+            }
+            .change_pwd_btn{
+                margin-top:5%;
+                margin-bottom:5%;
+                color:#404040;
+                background-color: #b7b7b7;
+            }
+            .change_pwd_success_btn{
+                margin-top: 30%;
+            }
+            .show-time {
+                color: #d3d3d3;
+                text-align: center;
+                font-size: 18px;
+                margin-bottom:30%;
+                span {
+                    color: #f26531;
+                }
+            }
+            .changepwd_p{
+                color:#d3d3d3;
+                text-align:center;
+                font-size:18px;
+            }
+
+            @media (min-width: 550px) {
+                .page-content {
+                    padding: 20% 12%;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .page-content {
+                    padding: 10% 10%;
+                }
+            }
+        }
+    }
+}
+
+/* =========================================== */
+
+/*     密碼重置                                 */
+
+/* =========================================== */
+
+[data-page="resetpwd"],
+[data-page="changepwd"] {
+    .navbar {
+        @include main-navbar;
+
+        // box-shadow: 0px 2px 2px rgba(5, 5, 5, 0.8), 0px 4px 6px rgba(5, 5, 5, 0.5), 0px 6px 12px rgba(5, 5, 5, 0.3);
+
+        &::before {
+            @include main-navbar-before;
+        }
+
+        a.link {
+            color: $white;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+    .page {
+        @include main-page-pure;
+
+        .page-content {
+            padding: 0 15%;
+            padding-top: 44px;
+            .logo {
+                display: block;
+                margin: 0% auto;
+                margin-bottom: 10%;
+                margin-top:25%;
+                width:30%;
+            }
+            .title{
+                text-align:center;
+                margin-bottom: 10%;
+                font-size:24px;
+                font-weight:bold;
+                color: $white;
+            }
+            .change_pwd_btn,.reset_pwd_btn{
+                width:100%;
+                min-height:44px;
+                border:0;
+                border-radius: 2px;
+                padding:0;
+                color: $white;
+                background-color: #EE6531;
+                font-weight:bold;
+            }
+            .list-block {
+                ul {
+                    background: none;
+
+                    &:before,
+                    &:after {
+                        height: 0;
+                    }
+                }
+
+                li {
+                    margin-bottom: 5%;
+                    background: #545454;
+                }
+                li:first-child{
+                    background: #4c3e3b;
+                }
+
+                .item-inner:after {
+                    width: 93%;
+                    background-color: #444;
+                }
+
+                .item-title.label {
+                    color: $main-color;
+                    font-size: 13pt;
+                    width: 25%;
+                }
+
+                .item-media {
+                    color: slategray;
+                    font-size: 13.5pt;
+                    width: 35px;
+                    background: none;
+                    border-radius: 5px;
+                    margin-top: 1.5%;
+
+                    @include both-center;
+
+                    .fa {
+                        font-size: 1.2em;
+                    }
+                }
+
+                input {
+                    &[type=time],
+                    &[type=number],
+                    &[type=search],
+                    &[type=text],
+                    &[type=password],
+                    &[type=email],
+                    &[type=tel],
+                    &[type=url],
+                    &[type=date],
+                    &[type=datetime-local] {
+                        color: $white;
+                        font-size: 13pt;
+                    }
+                }
+
+                select,
+                textarea {
+                    color: $white;
+                    font-size: 13pt;
+                    height: 100%;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-content {
+                padding: 5% 20%;
+            }
+        }
+
+        .toolbar {
+            &:before {
+                height: 0;
+            }
+
+            &.toolbar-bottom {
+                background: $main-color;
+                position: fixed;
+
+                .toolbar-inner {
+                    padding: 0;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        font-size: 1.3em;
+
+                        @include both-center;
+
+                        &.active-state {
+                            background: #a26531;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 130, 80, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .passwordold-block,
+    .passwordnew-block,
+    .passwordnewconfirm-block,
+    .verifycode-block,
+    .password-block,
+    .passwordconfirm-block {
+        &:after {
+            display: block;
+            margin-top: 1%;
+            margin-left: 15%;
+            color: red;
+        }
+    }
+
+    .verifycode-block.lengthError:after {
+        content: '* 長度錯誤';
+    }
+
+    .passwordold-block.spacesError,
+    .passwordnew-block.spacesError,
+    .passwordnewconfirm-block.spacesError,
+    .verifycode-block.spacesError,
+    .password-block.spacesError,
+    .passwordconfirm-block.spacesError {
+        &:after {
+            content: '* 勿包含空白字元';
+        }
+    }
+
+    .passwordold-block.nullError,
+    .passwordnew-block.nullError,
+    .passwordnewconfirm-block.nullError,
+    .verifycode-block.nullError,
+    .password-block.nullError,
+    .passwordconfirm-block.nullError {
+        &:after {
+            content: '* 必填';
+        }
+    }
+}
+
+/* =========================================== */
+
+/*                登出作業                     */
+
+/* =========================================== */
+
+[data-page="logout"] {
+    .navbar {
+        visibility: hidden;
+    }
+
+    .page {
+        @include main-page;
+    }
+}

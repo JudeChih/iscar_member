@@ -1,0 +1,1 @@
+$(function(){$(".change_pwd_success_btn").click(function(){window.history.go(-2)})});
